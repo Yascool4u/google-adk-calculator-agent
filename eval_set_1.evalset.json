@@ -1,0 +1,532 @@
+{
+  "eval_set_id": "eval_set_1",
+  "name": "eval_set_1",
+  "eval_cases": [
+    {
+      "eval_id": "Calculate_15__4__100__5_-_12",
+      "conversation": [
+        {
+          "invocation_id": "e-05d10f38-ba0f-42b4-891b-d88d231a5537",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Calculate (15 * 4) + (100 / 5) - 12"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The final result of the calculation `(15 * 4) + (100 / 5) - 12` is **68**. \n\nHere is the step-by-step breakdown:\n1. **Multiplication**: $15 \\times 4 = 60$\n2. **Division**: $100 / 5 = 20$\n3. **Addition**: $60 + 20 = 80$\n4. **Subtraction**: $80 - 12 = 68$",
+                "thought_signature": "EpYCCpMCARFNMg-HiTpcajdjd3PO3VeTvwx1o1vG54GjhYe77chGMur_3Q0rWrUqLQsAeV1VpMhM1oyT__02o9XlBxZzpPCohGSzBxlIhJJIlCIQLxmDt65g_f_ZHdtpiRWNuydRH-LD71i015KIeG6iWWo78pKETb9KfI56qFB25-7aGOeMSqXfXQm7rXj6TEDq-G9My-IRXhs8e5jIAaQq3NJVDR_t1ovMDC8r8B1UUitVbd-dvmlYP_4_T9J4G7TPy3LcoA4ppXdfDasKN3rnFwhcjCqQoigG2_KhRKurE14ziAhVYq8DSipAfOf2Iw2Oes0R7w4USsjzH3yIjuixhC2K52J0FzLd4CR5LaO4aYpqFeJVi1w="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_413915",
+                        "args": {
+                          "agent_name": "MultiplicationAgent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "EsoTCscTARFNMg_fvDhCJ4-S14NYbKc-aNg-3pjou2wv7pORqQWZ04_9XdymcN4RKDwV9UBko1V4XpxBDf_lLE6Kgcf4-fxWfPAJs6YskjOwSuScoYyjCrpW8aTplEhAWUdz0eBDpeFGoZOmPWEu44wNENtU3si1_6Xa6oP0Wkoz8EU6xugCxsu9kuQHHjDEgcVoujY26ppWbgYcZEcqtvEleSSYjVnevpU24oM1Wf1c3_X5KttyIlrEhgGNInH5r1sPaTe8j9q_o8Pts70hEKYfQdDxDzmNLoViQS-O3XvpN04LPAsD3_pufi8cvZnGXoT77f2zpIIwYNuctBldrUCFvYVs_dokkF14k7fLxsgPSoqAdwG2Iy_1zLHkoxw6Pemq4XztYR5Vazie2eDFCTTpCpQtkaKHeZVUbTOlzdGDnW4rG-qc6Kh5JBbpi6QgyiIxARdWpwcNl5FMHuITEBhv__lVK7m5UyRYpdFZZ1q0nswpBnzMik_d2xrpfle7Q02XKLxPAupD8QFsZStJjvixkKdW5MFSyw4I6SB00CE6jfg6V8-wghQGqYq4oWOgkvB2Bged3haiSgxwNfqUKiuCUAK0Ow9-PJD0Ap1w7BsaJ5lpuTKqf1yx5K2xDapfh2buaihySZbhfCd1kgqlZdkPq7Qp-P4cQOqUlDHiGq89TJKY6dEiqgtyjq3CS0wERWaUPIHqkXiSuEOjCrfIzyXKzMs5MNyHYc14wDTt8wziNQ-3dGOu65KwyZhf986l7XeB1Jty_UdomtLUGNl0zXc4FOuh31BM81_whqH4sUA2zpH_0EIY_wgmmDycLzfDFXK4qcWkKyR8zZ-IaoaBPcZr7V7b00MDt_4FAp5kxGMa6EFjvE7ZHhfv8rKbBmsHA8DL25WTIPt6JCjUhJAUQEpjI1UdsZvarTFGvNhfQK5vCHr9jsDytplfBuK8mGgLYzcLb_LIFkfna69eBaOkGsdGkOkZ4ibh7Imsk1TXDzD41XeACzvRLe2Fzl1wLt-b0r7_7VD238rxH65r95z4-wsoUA0NmTDRK3Lh1p7RYrmeDBjdtzTul9xPo41pC4onN9ssXEJJu-RD8KJ9-2e6u5hfN-GoIg1nWI_ZYqrD1fSHLy1iWMDVeqIIUxKxDM0x48f_SonX942UC3eL6XKc5eC2gAEKPICG5mm9UXd8mT4HC5dPPHn1sxB68xTv5PbGpNeVXd2DmVDaOQPpKtxN51y0MaySeIR3oczyBS0v46dMh3TrM-stEYFb8ClHej64qQvlPQhsAtzuMVdxcBdmZhAVMMjFrBF4J8ICAr0LPGeLy63YseUGu3gL1ii5YTRy4K6l5A_X-dP8dGGpa1gUHbrBUnCV9SSlOfyBerWlf6LIk7Ph6fHHNO6QPjTte9p_DQie6CjOc8IgX7AL_BLQRJzMgtb5AzygTI2cZKf8UbvOBuC8sz8Ib9x_2Q7qmvh9gEZSKOdKZTupdXHe4vHFWgjdbPsHsxc6hKXctnnbkW-FjRcZcZpteLPBNXm1jCROstXxrkmZ9eBeAwKPClZsGCBwYgJeeR9EEARxMzIhoUTxHR8-wiMNVJ8yt1XIv4sv61LmUgaR5dKBjGf6X9oeeXsz5kZnFFLOAMeD1_-9KFaCrn7eKYNK2z-8XQPjmzP8b5ARvnfjNoGotVMPcEASxlpTGXTLPLARxW7t2illojC1QY_XjeLMAyyhhb75tuYBDJdZOVZL8wWeEn2psRoUv1fCD_ZG6UWwh3M2VwlgYJULszcyJugwjHG_zmCDMqKkVHu-BjRDCi-WWd_iyBlEm0CeTDXjqMv6f7AVbvBZd1q5wK6ssyf2tggPviMAQ9yOf_y5bgy3pBdjg06GqDyQlMcy0E2FY7nb6DXHg3bFbei28ZMNpKnpmqy_rBBydmCuCiUEvElb8bpAXv-ZeVUOWD1oegsE2ggDeUz4fygleYxSyxubKMpwDqmrB2bf96vFMpKetk3QlXRByJi_mQru5RxbPGI0Ps3sJ0Aq2CQaD-FrIdCG1NEJcq4FZi146j-82ovdZk1xltSpfCJ2TvycfHlcPYSm1nvDbVo3zX3b-AYb23-OBpqKOkVtvnPDR12woOXoSa_mMRLe_fHfCP-kwwCTmFA8eAcxuYrw6VvjxO7NTvCLH5oG4J3sFJv2exEz-aK4uzwhVx_FvUZ-00eqFpg09G35lfryeaIyHlPhad6qQtDaNEWwhbBrMVFtlTiI5Gbcmjby5SjYW9p_gERGOpVjfc7RK0Ik0g8bQIEa4oUF15-Pf6d-rOeqqGwKc9MJohlA6TIWK_hK_Ce8ozWT5xNXLLFC5OZCr3CZ2S5nEffzCe_by4LkvvYwUI4UEPs5lFn6RlxnqLnr382UDOwpPVNCgayvSYHRzBb1lfSrSCC-fHEZxWby9qHfZMRcLGuQoagVj539fY2cDWK7oDzugEaasOZ3tyXJ-tLBEgYgwglMjy1GgCgeyGOXadm2WUq6KjOySWiu8rlnKm6mxKgtxyu737uJIJdj7mtWX4BmGla5vyDnUWMgIp9DE4WffqvW4sKAFaszYF_JSoQN03ITeQkVrMkp6_VLW_F-2RG5tWypzJ55Z-otU2wfkzFg8kU8rK3xE3sYGJvuK4BMT56kIa-Ue1wf_8W_oDOEGECewQBjDFwBnKlctW09d1Y9GlJYBbfw_4zuUReWLub9H3kkqCWrBmZzoc76IWRRim2KDDs4XW7zhnT2O08zih_VViI2mQacFrY73--negkJ26p-VTJM-alXAU17_xmHxffBtDQXGhscQWs5B31jadTiX-cSPFjk3YiaWftg2uJjqAdJw314mfxCdAnJSH7DVKcCT6T5sFcsFQLqIlsO55w-aSBJEVxcOKmEMma4Au6U0-iEvbYdqs4JeRan2HGCFhXYfK2EXLMmBdETNvlJMBtywXXxIH7EoiUuXav7rvWIhBFUhnql7DjL2Nx1R-P4W9sBEIkc29nyzQ81qzjbD3n76VxeGfZpNY6-1tiJEYxo3quyoMt3xvUhYtkZH_hnbgEuoQfTu9UAxWF3FlQvdeCm4Oby2i03mGlfR3lxEaxlbLVAfbD9cuPCtNgqWQU9EqN9IWBXcBx5aZrUNa7OTpmSQgnE_9kjsuRzgkWTgJLOK5jb9vqJ2p2SQwi_QDaXOq30cvbCBgIkHK3IGPjT150TfwS8aYa_ZUseQLI68Y3a3vIGy8nGff1bqOUsfaZgkd7DeWfpWT58smME8hzkHIDVxE9jPae-dCrW7nb9U1uFDrSL17aoBbtBL9tmZwsYLXiZi0v9VPpIR_CyNAManu-OqJrqf-RL5PeWKJo9WcRaUQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_413915",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "MultiplicationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_321420",
+                        "args": {
+                          "a": 15,
+                          "b": 4
+                        },
+                        "name": "multiply"
+                      },
+                      "thought_signature": "ErECCq4CARFNMg_dZSjMk-o4hlzQAeotJfqnK-kb86KUrFCe7XQ28LZbcdxTaCrav3EzFP6KyOc87OPfQ4QuW22Mk6CBrA61Pnioo0mt2uqS6umgQuzLZGgUBLoFJA7NRl45HUQMyiwNqgcxl70h2-2iRNAKL_7_JFK20-DAFOJRWw_bPIsIqwvpwCQ4xG5zZ2IizbPlFgD3jfnK0pfO9ZYxxDYiWnCTjBtl_3iA-Fm72v8SyDhCMHs4nDHTDatLEQsb-OylAD7tN5GMkq1hUCgq_vbCanQUXQWCh4SXUh1HEzWkrPYTFLr4B9m2zrhud3PuC13rsbTV2RV1Ti0vzRl1DsUfWpQWBMYNJzhiYcKcIm5Kvxjpwxo1rdq7YaaW9KYy3smv433ct81eEbGSOl7ZfwE="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "MultiplicationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_321420",
+                        "name": "multiply",
+                        "response": {
+                          "result": 60
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "MultiplicationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_313043",
+                        "args": {
+                          "agent_name": "calculator_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "EvwICvkIARFNMg_FLJzDM1z3T7h6waTVaGKa2O2ZOpzY7zameY5cHng3mRiPsKB-XT6PBftOSZF__Jv6tKFcU5q4qiJbo9pZeGoyXaOWg5lXtavAXG263QT4NkXEqurmFG6JK-Gx27wl2yxU6UCmV4j38NGcqabxsgK4KelQF3I89mROuzw2hMESYUO_rHZviQ-LfhAa9fJfMBZmnm2n8MJrN7ujEavAZmPfxLka--xsVHUj18Lh8fYRqT5NCp5Jxfsc6KGKEwduQCw879IbzXwYd17_94qIMq55qLRsm_QPmajXAZRjOX6nJN2D6k2UTt00-MG8T_1G5ASttgd3N8ZUjoKq4NpH0nQO6fmNQdH5_PHas72sVxXoh-5df0WQ6ymFfSyRuLoIwEo1XH2nPk6rHo-Yl3sEXcaoKAjR5vuGc5vDSZZt2noY4zq89eJ4sfP_-JnHRguRkIAlqGSb-bsfTJOTZjSpC4ulbMYL5k-fdbiL_uxUBEl7OKVjUUmlKww4lTc_bTaJxzcAjr2KhK-v06FqaQNryxKK-pRtEupX3u90RRIErqcfhPwko3a7L7qeEZl9XU1lD70Yt2ynecaGMr9MdB4D78eZDHsFr4cQZ62D0ZRXbUEAk9ZNx3OD-ERtRmiCavCeRk4TFDfOllRXVBURsGe-5xI-0uDOC_WJvsgYZH0p_YlvkMcmGnswVTBYairDzKILW7TXP80Qjl4DkSJ1-mXWocMn8mEOgBYB2k-yrcWi-aQBNDTNSGpFo9FU8UwAni4nGcCKp8KC9vygmj5cKQN7rkcORleefMveU32Vi0lCYT7ozQU-nek6K7xXWcRDmQtOKpHZInVob4KpMCDnr4q4neGvmDBwvPyoC6rXJPIvHq2D5_lHtHfkyzRihNQ4Z9FLADXYxmKx_SFc_mkZ-QZd8V3Dfu7cld5NrFbqEh6uMlUznA5FYtt2xQ-Qx3dmsfrv1dSkSAe_QuMv9ws0SaqCCZ9Rruh6N2LAjiJ9Ihvxraou9Z0n6YvvCOKrMBy1luraKHnl9a9yfrKIOL8dL_MMAIyScjZx1yA7dZb6kdB-2--4XiACF1mb84OYAe4t9CWd6vQ3uWv_-I5AL3PQ90PbzbesLUncPF8klbOxul6FQnmWK7FqbSWWt6QKj2ZbygKXI8JHZ7vwE223hYOD8B-r1Q9c1BcB5QTE2HMFT05WN6JAc9fGY1c4-K51fW_smUNaGSDjxdE7ArK8MVN_lrvDQnGpWlJks9eh_7e0ucYpadU_WNAYmeXkNCXHOYd8DBWaceVJjrF_7KLVnZuZb1VyNFQhcL-m3gjKs1sQe1sDMlmE7MODdRauLQn7-EwgQdJSBD-EBGKqR6_5p8rplCLdtTJEIf135Rz8tiIulvUfSTqqB0wYNGNYfepuYD-bXTJgYaqMkOGd0OPiGxMx7BvY0gFFhBrlIMRx8Om3r9Nkiv2SZp01tpGzSPSjzn1t0GB7d4koN9DssRf_NqDDKlOWaes_4hTvw6UkhwqMYOH3-t7U5cMsdx0="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "MultiplicationAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_313043",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_302805",
+                        "args": {
+                          "agent_name": "DivisionAgent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "ErEDCq4DARFNMg9gumgyfdthmQBhRoT8ZjUVvpyBlFVavwBya2MfWORmPOYje2KTGKmvH-ykAugrvX3o97KlK5BpTeMWCGNr3Z_IWFuJag8tuQTMIInI_AfhxLzok66R5bHZV_D7Y2Zoo64SsqHg8IhfUziVTMJ-Rxxi48dgD5NLIh8TOecXQtwnYOMaMuAh9Zdto-N75s5t17Hgbv8z-5E60tbOX7nJpNGHXFoVUar0qeejGDhg6NtrFlxFboupWm-JHFksXnQprGSK7lvpHXUs1k9qV5YJ9t9D0qxMNFj6icqXFX8KGIH24pXIxYq64QfclT0zG-Bahjwbwg_REEPUyxHFLAilRC3gRxT1UZOzOdTBl27tKrjMu4tL7x6ORtnUdT9iepk_D2DvqtJH2pIU1Q2QNecNDlG8h5oa0BTKux26yzGj__1QRVGfvOr59zpFY-k0BBMqNoymOQq0c_toeIUFTarZhKAefQgS81C66-IAjXLQP_mO_JB__2vS-30Tb09-IHdrdlhnamKpfxIeqFYhsr1eO8SDj8Q3cQtG4CYtOIxtWbyvtei6ElvtDGNHBg=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_302805",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "DivisionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_534536",
+                        "args": {
+                          "b": 5,
+                          "a": 100
+                        },
+                        "name": "divide"
+                      },
+                      "thought_signature": "EpcECpQEARFNMg_kGuxApaEIMTgtnb5ihZ9lpHpaYuSyWAh6Cmz4H3vvn7sykzw5pRYi2GEDntefzlmBJTh44To3YcbCc-k780iHyWXTeYtlUTn0PUogRSb91gZg5NVkBrbaEKTfriPhP3ECFtciH7WDiubJRBOMSYEG9HXQoZSeYwkP3cjppAzK0EIMNpG5WiG7trnI1muYerW7pkhE965XskYfSMg_wOslHCffQGOtX1gOVvYtRcpPZagKflo_P_7NqJ3YWbUKF9HHo3VPfzHn1J0kI0cni5HEyj2mLqWzs6S5a8AbkCXALzuqRaETF-TRd7QQtCXM-VissDkWhSI2s61_80vhgBVTSwVt3AEEytthcUSC1_Yy4fsN6SfxCUW5ruuDoDI4yBAquGcqp4HSJ_UA807cAUtbBLlS0WTXwXDQq-3MVQrGfQjkMLzAAUW3NOZfGDSPFt3BAn7rcxTamot4SDvur2ayY2Odl-Dx6xtLfhB5o0EYw3RpfxhTegnB11wh5_-YkBmDSQBvy2NB-9U5Hg48WdrKwTzBUmrTMzJ4Ng5gUAR-4iyGcS9jqaEmcRr3C7B8rOC46aAlHnL7bVhYvvwOfdEi1OSfusOlsfdhDbidfUizz6EPQwKtMWXPKf0HbaYrk1j53jr-rBF9O3FWf4cczs5kqrvfGh1ZCRFWcT_MvuIzXVWjgAVmpCLqabW6XEUnhg=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "DivisionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_534536",
+                        "name": "divide",
+                        "response": {
+                          "result": 20.0
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "DivisionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_412739",
+                        "args": {
+                          "agent_name": "calculator_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "EqAGCp0GARFNMg-eWy7GiEIHjIagWAfPwrlmG_0DhDAHBu_K0iPTHNgJx5Sz32xC8VrfXuh7KB7wC2lnNfjzhNYNCnPWDgrFzDwF9et6cI1dDbgml6f9CqmrkAZOwnnKEc3WW7t4Xwi-UPtRYgtMbamw7IGvkx9RrSOZ9N9lC8H-zaC6DNEejotfvXvv6PVKYpAHKFIiznSlpGr9jAnwWOgvoxcMf1sypLNKL4FLdaNOOLawBnCFTKrXKgx0q7Snbe_bPvnJe5DkKWVKMU5x7aEdKV962yzbDNUkWS3o77th32eJA5usgKPsp09489WXJIGF5jArCvN03I0BizeaIyFBU5X2JSROUZ54XttfN_HXd5l-QL_PsHx1VkklhzTA3wlGW5h_8FtuEJ_I9ovPYeHbRwqO78W5Gh2RPzUKClmvyILxEB3qop2kvNqgp1U7xwk9vr-t67OSMf93AU_azURfERhavvhz4F4zjhQLPwgH6V8efwA9TahJMrpjtCNhEbbM5pjThr8Wd0J1wk7-dqKJbbF_H5jvUTICUGin4vextJLeOjwS9gpTx53O1je33mO_w1l44NRDF4x8z2FRzW3KWW09NNw9tuwCAqawMo_VDO4_CrMscohADud16-2rw5sBzURcDRLqWYijcZ9dr7wKrBEkacN4OmGjNTeCGTocWOjc015s_78G7YrlmHV8Z3N1WYh3-01NDaE2aKJ2ABDPErMv309rAGzDBGZxId0orXxQLhd8jEll0hknMiwThMVL-nhm82q3Rh_Qr4nzNxoX5DQG8HCS_t3KXq2DjaHLoqvIiscwNvJy81KJKVLqtKOw-SbwG6J1KRKy1HD7yeXzvCdr6bWxicY84FOVcRAQoNnVcIYtwz7ehgFsPzpIaDVghnbmK8BMSoez8xL7GIdrKzpYXSRmL9JbCztrdV12Uj3Yk-3cXqXV3vsEYEe3CqyIzakp2z37ZalSQcwNp6Z9QTZemtb3OsDErD_cW7fKQ5ho8rgYXS-AFP0WBlxbvU5TStzZRyGkbxUl-4SCaiUgwbP4SF8m1lMZe8QoZptGeCg="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "DivisionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_412739",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_563875",
+                        "args": {
+                          "agent_name": "AdditionAgent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "Eq8CCqwCARFNMg-3qD8usa-leergSjEEwQOXE5GgoXJNAT_Fhl5rgj8V84cD8rF9_lQTW4j8qy-c71giRSV3Z38LP-eyuTq8RN77RQGoHM8KGFqZa6lkkXXaR6s2-_lBitaCWVP2zn_vBnC3zzVyqKLf2Zq2iFmnQuHEcFCxFG9CVtqj2nAkEfY7DCv_c0PupOed7U1V4ZgIkfJ3E1FP7R1VQxakj6vVBBvWmM0L34I1HZkBtw97-GMQ6yDZEusE-edR0cW_Fv8ijkqhKM4RkI_viYVTIFrLNvsit8F7eFA1ils621LxhkNO_8LkF4c9wNAUZ75xmkaKoz2fmUnbMqmYMhOk7sKgggRJsjKdzj2Xq9ca5UUgcMMMa3L-AQKbBl3Zgdm1tiFcAaa-ZJ0YLPP-"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_563875",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AdditionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_350678",
+                        "args": {
+                          "b": 20,
+                          "a": 60
+                        },
+                        "name": "add"
+                      },
+                      "thought_signature": "EsUDCsIDARFNMg_sIyJCOOSKz6ZuoEq8SZ5z9kwQFL96diURZpACY9IdfzPJStXhX8lRHtGPkuSj4igkYqtrzbSKH1K5-ZSwskYUFMyta3zmqHEe6_qLitpktp9ZGFRojwyfEifKFKubNgTYYTYwho-3i5ert-QT1Yxjh63VqHPxv06UdquCwKtm8AvoFy2XAEF95KqAN9qU0Ge62aoAP2xVN_rZqyxMiJrXYECLkyfMxNGRINWQ0gSKBpg3bKsDIIiqqGw3DETukvh8hugVJQ8m6Ils38Zi7e3SD-eE_fav662M7HjbxLHlejdcHWigz7f94o3mooHJ2N5NKn0PXx4Q7V-tGnZYEDS1W3BwBlX15_Wr0zoTXvNktvLOGub3jhBwvXRHUN9jV4GklwHZVRCpO72X4gf8HOzWcyqUfttQ_IvH0rrTWmivbfuCKAVZU0GMfXJY3iVYnQWaA3NY-t17Q2XM_LhPneW-AFPV6LWug43SIcqEpAsr1zoSfFaTuB6mrNwmG3HzozHGMUWyPrIFEM8G7QPmicWMe4Zklv4iTmJ5qzTl_chWjrknZl6PR4LULDwDdcj1mf90mZBJhW5c45RQ0rYW"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AdditionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_350678",
+                        "name": "add",
+                        "response": {
+                          "result": 80
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AdditionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_241733",
+                        "args": {
+                          "agent_name": "calculator_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "EpUICpIIARFNMg9ZWaFQAxxxCXYmHmPZ5dEBnpf79bFMvxjsOLEAU3zgpHQrR-9KxPlrhZxtj7Qvh2-AQRokk-0yAlmzbhKHWu9cS5doenNsGn9xFlBhia6VcumwLNv4eKOGA63LEitF67_Zmlkvp-U-PFdsNDEwb3u8Fc_lwxYXt1MN9CWUt5XnAbne3nCSHljsGZ8gKk2vjZhFnBDtilcuDmDEVs1-UyuqOAdN5SllVDM8jaLVxU1hHOi-4oCDY7YfrxIeoa-Qm3WjpBbb9sib76r-pTOiUuahnWuuwTUtHsh7I5XmBUfJIyTjnjilXUD741b6iFELeOMrRFtEUff5_OoVTnxm7EmhQZwGdYiE2ZTrS6t8_IqIcMtELM2TwIGWQZ8_pnLDMkMgcpZex9jCTi4xaPnvlXCz_UwSuovRqpfAubSghJJ_KOmu-8SoQLvvTRpP3FwVfl7KQLcWJviG5VgaRCLt1fCt45xhLd25MYAjgZ1uinVaCCqmS_OFQkM1Q3_wAK0GDN6br_mbwijFI778qc3_YKDc1HGMDy53Lq9GhFcParlEhJISZYkfWNtWgLiFIE2Wz341z0t_t7YOBwv3ZVzAnL7g8kNgGTBdv0zfc0Fpg9mp-j17VkQ8rri8DRxcPq4CFUqrGbBmBBb9108nN4enSEqVD0mz6ir_T1a2y0c2MLrdPZM9wH9MwEDSILlXL5YCmGroFoq9VGvC2wRcmGxq_ofTlq1jYcJQzon00CU90SU05Y61eakqh8kkcnfV3RJNDOBsk-FeOAUQmtAa-xvCD7Y7vOfLvDFsYNzEClJeu1mhM6KhBqHtp77Pq7BgrUn55iukqVOSjGuz-Mju0a1q2_zHvYW_24C5laLvPunTNmNk7BbKhuRlHp657PBj6eTLrESaS_8TZmIH8RWAzHs0VcRlA0Yq613LZHQxF7ycd8LaLIf4vFsMymTBw74w8SphSbDMwEb2_LFf0fk7UG0sKzWaYo99TWwDGPs6TMuuZc-DgOAawTT2tFgX-uYDKB2VFmmxCNiTUbzuGcvRVIjiDbEKoLlAR4Wn6j69JrCepQeVRnPVw93IShVvJ713mS6rBnI6Vp2Wqo7KRff8mMm91ZESEcDpBxRm-qkavNNFFZzaWMs7mw_dD9CaSkn5rehc_V-td9Z4muOjrZCtzqfLYinQTVpzjScfWIv6AFY_ZkhMyJqIyXT4FCzS0kH0qVvvFUEOf9CtBSeJ1e8f9v9Uo1eSQ4ob1e31xHTESrOFVGV43IzwUHX6MlYwtDM868OQ59JNGcM0SEnwUeCrvIBxty0asaKYCBNpGDFhmIiAJxRYYQ9MhCv7qovtYedbPEHTwsIHF2f4B_RSZrAUvMjINl_zzZLLnqs2ETsp5t9pgg=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AdditionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_241733",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_283202",
+                        "args": {
+                          "agent_name": "SubtractionAgent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "Eu0BCuoBARFNMg-UuZ6wHmfLEe9kBcDEscAGOIlVsUdWl6vQRwdfeQOW79q_keqcH6Kq0pWpJdytv9YTg6Y6ilOdKALDrv8fmThJVQQjICSDp-hLJy4Y7hojqEsk_JU-HmbwOtRtDwB7WifrdoBkO8iSQDBrUOuT5Hevv2-MCqR6w7vniL_nj9T0b45Xgb4mUrw429bU2BshhRdc4_BRy_2jj3ZSKUHsd_xAuu9jYMT0rAYDTA0Lwh8oiq7JCN-gTbwAHdtkJz2GWjKISaEMiTxVqLf92ePSxixNoOO3HCNBSh6g7qe7Aq8EdUdrh8O4"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_283202",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "SubtractionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_237748",
+                        "args": {
+                          "b": 12,
+                          "a": 80
+                        },
+                        "name": "subtract"
+                      },
+                      "thought_signature": "EqEECp4EARFNMg8IrpWiLJ9oZOQyFyGNFrxFk-WTYvBS8nl1sHTQwSOLuDj1-m8f8a3Oyr7FSMiofe8p8FlR5-f4M1374anINNJxu8Jqgu_z9-7q5uVOJ1HqX18CFQKD1pwlcqSObjbHygBRIorFof44hch_AR0Fr-l0t2Wls_fIysvWsapv7JPttYFV8NXha3MxRxXduBT7uptUOOtr1D56O-l8jrWS08ytZRY38Oo8xJjxKHnJQqLkLYr3VC0gx_xUcnfII6u1TZH_sdhE9uKTk23pYMJFyCrb9Q28IYMuUOvh3wnTwYMkYGd18dEzjULXacuvisfprtbrTMqJcsFkKD9By_A9sWCfJEn61UjUewVd1chOKY1G2DOzLjOYdJjkT_6uEkxDrSuVVFAIgK-OKDJx-MObUnbNWJESgsW2y9m4oOqEq2F8liXAJEr68Xnw_XPHEIucYwCblqvE4jyegzeIVudxGNILbGjAxE-bMigrEGKrMEMGCeMZug1JvJ4M6e2xMOW1SnUrT29cWhXNDMbAkDuGUHcbwn9T4N1Ebd9rdLRlTsocgDGnKe0XJ8oN-Urk9g7W5zSrtbAAnZdi6ZiaUeNr0AVcWAw1WqEkXyCXRWFPlsFt2ypZvN70vdRWOhmAQT9wlPMrxngHhx-FF7uDV9rcT4rvZ0INvMfDZabynPmauimF5IiwQDRMQpekE3n0To-lL2dR2Il9A9sD_5Y="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SubtractionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_237748",
+                        "name": "subtract",
+                        "response": {
+                          "result": 68
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "SubtractionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_366965",
+                        "args": {
+                          "agent_name": "calculator_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "EqgECqUEARFNMg-20XSJkRZxCfWZCMh-0ulO3NbAu9xb0FEOwQihajhns73E7dkBRgaWJ0HnhbZpD54t4UqCNww-MwGPHhoMung-FU4G20Vd_seGOlyZTA8UXBq3rJBj2SOUV19g0pOjG41zwwLAqutzALVbnlwNVEhsRcOY3NV46nV3yGq4EA0cwDROXLtdLMhaQMs9e9xmuMCjOF5oblFexDPZfnoae9powqW83x00elfo0fI9iw0rC_W33cPcc7DVqehgqa6j7HGsTtjVMlv2N-rlh5aGC4lupwqZ5X7AkLCLHdrF_lH62JDD-fX-QOxHbwNUI7bof8YALGSn0XrJjT635xTHb9Gy90JQcWu01Q6jPnoQVimTZHz4HLFgoEkjmDMdxWD4clF3xPhvd3gQnA1HxgJi6Hw7KeMhn_NatyvyGfVBNHclxhnLII0fw0UOzMbSGvCJUX2pk2z1qVYPIfFBmgmFb_JcatLrFZlA9UkLfzhMizYVOCxB4gJ1qTkz9u2wnvGsz--_p5Q1jhpoEXUYHqml7NM1MQVGPzb_SL0GgCg-Bgn-r-8MSCS2avkCy4QezBTLIFu07kFodlE1J_v38RD7YFi49tXMh5vA93srMo5HBAweamdG0tQoKZRnM79KfpTPdt8wmF2lNB40n3woz_360hnXHuAWFhAwC41MgGLtTvnazKBC8SmqtDcHdxCtr0KWQu9NPda39RpXEtNAsoexu9ZA"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SubtractionAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_366965",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1789625351.6573489
+        },
+        {
+          "invocation_id": "e-b768747a-ffac-4e9d-a7e7-37bde755e9ec",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what as the last result?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The last result was **68**.",
+                "thought_signature": "EtMDCtADARFNMg_R2Jhd-h5San3BHl5p3bbf_g_WOOuUR-ub7OYUZMagXTgPZ7hQGZXcZPNz4jXtbaFMFImMbqlHsChMrxbQpowQ0OUQm23EgQdN2XU5EFTAAXWoA149f1PwqadUZIDG4og1mApNCw4ESEFhGTnBajy49oYszrCXqoIiR6ml30YlM2W9L402ms1QQbY62nxfWUXehtG868jmJ1pfuUdFUnc2w1BMS0zN5yWU8qe6JBy34OaE2k2wUyVetStHARH8AR55ggr6c7gV6Vz5dwVPech3ZlPyQ52WAsJib7Oep03jCdiSbk_dLP2roe9KwY_K-lSQj8OhmW203Zmy8dHv9iooxiP35-9wSzYqoKtnsTbuhjE1G1ufGIu3oCyfyvNw9IDp0Q1vJga0ZeLl02nDDLeOqdz0_gTExxG3PRJhKNglKsM9wE6cgyYNwNkewJVy7FyUC4JOIFxe0eWl3A8T_S8uWk33o_d8sPy1dYp94OCJy5rcZSVl0-534cSaVrxDpe_-qeZkDwtoEUEOCijLFVPrHqszbkS5mJXlibSOM4pqFWRMnkhjLYCVHhiS_7mkO1HYwIUZ_GOzBFiWjJOGBrUKCX-tME9oxQKhm8I="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1789625415.0339751
+        },
+        {
+          "invocation_id": "e-6401b23c-ffa1-4e01-8e7d-4b69864a848f",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what was the input I gave?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The original input you gave was:\n\n`Calculate (15 * 4) + (100 / 5) - 12`",
+                "thought_signature": "EskCCsYCARFNMg8PvYCkigNu2GWAcQBCzvqKM3jhK8Uq1fGQJMGiiPflVcNS0BOL_ugrAZyn6K2E1isvot9Yp0EGsG1YRLcQh5K8GiQSjPOB4eXn3Ygb8GmXE9BAfoM7bWQc8ADWG2X4uviVJJAbyFeCv_LxsL-0_9TzM0TBmdBYZCKetKqVNeCZjZfPuxCV9rNugJ4JmQrWF4rw0nVGwtZNF_aeFFCTzDBR4F4z2oBzoyZIwTMXDpLCUIGYUJfWf-Z7CV73rpsdWgtdYDRIDJWBF5NAio94FI5KBohh0IEiYVTdivxTQkCvCxUDSnWEKYdF8fz-0PCS5-wTjF6Q-zNfBBMbRuXH6Tr_vXYYbVVlTgJuDKcmfLTpJ1k0YNF3LDwq6kzt5bdxq0Flim-jQ7gmWioStNVT3cFUk4TaVwxnCDBS13eweXMtUjU="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1789625466.571729
+        },
+        {
+          "invocation_id": "e-13c82cd6-ca56-4dd9-9efc-79dadeb02ec8",
+          "user_content": {
+            "parts": [
+              {
+                "text": "do you have memory?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Yes, I have memory within this active conversation. That is how I am able to recall your original input, the steps we took to solve it, and the final result. \n\nHowever, my memory is limited to this current session, meaning I won't remember this conversation once it is closed or restarted.",
+                "thought_signature": "EpoDCpcDARFNMg-yr3SZuPp4E51jdsLSZMP44upmGQWw6x9XdarPA68ROAO5floBtpcsefEPbhFEMuBQ2BxLwbTfQ-FeWhO-ZP87IsoOo1nYvYrF-2dBc-9metgGJw6YChn7wxsdanwGZ2fKpw_GHyeGz18gZlDf_D3YRaSZHWHr09vjsOpUd8w_9DDY7Br6bbBMe6uLNlRHmaN4RWkgvmPJrfPVu92Z_DtxJhvVMlPQOdWPsmCQZcKt0BihGTJYtpK0f2Gn6MNvXd3JQdeOl044QYgGLMsA3J1a5NFxQcRBud1gEAHh34a3qeJwC8r63ecwP5-kDlCusQUZRWzvCYMlHXf91cmGWRBmLGYpOjO1fzMlNyGoCP9Sr0XwPny-ed5CPnUGAzLDWv069sTx7AyskBX531IBsE-PmSPlEviq67Om287y3PjAd8VIqQCpdPq8gLlS_JeGfdmw083bH3NUsrSJUy-u8gFFD_eyHB4qAicK9hl-L-e8Xy4epVZD7C1Bl6PP0kKdcOV1rpT8VhExf2n_hoN6P2ONag8="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1789625478.0025613
+        }
+      ],
+      "session_input": {
+        "app_name": "calculator",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1789915675.3668108
+    }
+  ],
+  "creation_timestamp": 1789915655.1682699
+}

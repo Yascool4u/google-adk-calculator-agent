@@ -1,0 +1,109 @@
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud --version
+Google Cloud SDK 585.0.0
+bq 2.1.38
+core 2026.09.11
+gcloud-crc32c 1.0.0
+gsutil 5.37
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud auth login
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=FFp4MK7alKTT1IZSuRxXmQIO0Vy9B3&access_type=offline&code_challenge=AHMG_gXE7D7nF0uhjQzXA4bM_Uwj9ihY9cbKDYmbHSw&code_challenge_method=S256
+
+
+You are now logged in as [contact2yaseer@gmail.com].
+Your current project is [None].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud projects list
+PROJECT_ID                  NAME                    PROJECT_NUMBER  ENVIRONMENT
+gen-lang-client-0600735033  Default Gemini Project  662589212608
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud projects create my-adk-calculator --set-as-default
+Create in progress for [https://cloudresourcemanager.googleapis.com/v1/projects/my-adk-calculator].
+Waiting for [operations/create_project.global.5088216935321452018] to finish...done.
+Enabling service [cloudapis.googleapis.com] on project [my-adk-calculator]...
+Operation "operations/acat.p2-352127564791-e1ab070c-cfb4-4438-8c9d-cb6f0f482aba" finished successfully.
+Updated property [core/project] to [my-adk-calculator].
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud projects list
+PROJECT_ID                  NAME                    PROJECT_NUMBER  ENVIRONMENT
+gen-lang-client-0600735033  Default Gemini Project  662589212608
+PS C:\Projects\GenAI2\Google ADK\calculator> gcoud billing accounts list
+gcoud : The term 'gcoud' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ gcoud billing accounts list
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (gcoud:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Projects\GenAI2\Google ADK\calculator> gcoud billing accounts list^C
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud billing accounts list
+ACCOUNT_ID            NAME                OPEN  MASTER_ACCOUNT_ID
+01FF73-D733F4-BD7D0D  My Billing Account  True
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud billing projects link my-adk-calculator --billing-account=01FF73-D733F4-BD7D0D
+billingAccountName: billingAccounts/01FF73-D733F4-BD7D0D
+billingEnabled: true
+name: projects/my-adk-calculator/billingInfo
+projectId: my-adk-calculator
+PS C:\Projects\GenAI2\Google ADK\calculator> gcloud projects list
+PROJECT_ID                  NAME                    PROJECT_NUMBER  ENVIRONMENT
+gen-lang-client-0600735033  Default Gemini Project  662589212608
+my-adk-calculator           my-adk-calculator       352127564791
+PS C:\Projects\GenAI2\Google ADK\calculator> cd .\calculator\
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com
+Operation "operations/acf.p2-352127564791-da0d0b1f-f45b-4252-a4af-19ad06f46e87" finished successfully.
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud run deploy calculator-agent --source . --region us-central --allow-unauthenticated
+ERROR: Error in retrieving repository from Artifact Registry.
+ERROR: (gcloud.run.deploy) INVALID_ARGUMENT: Request contains an invalid argument.
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud artifacts reepositories create cloud-run-source-deploy --repository-fformat=docker --location=us-central --description="Cloud Run Source Deployments"
+ERROR: (gcloud.artifacts) Invalid choice: 'reepositories'.
+Maybe you meant:
+  gcloud run
+  gcloud source
+  gcloud artifacts apt
+  gcloud artifacts attachments
+  gcloud artifacts docker
+  gcloud artifacts files
+  gcloud artifacts generic
+  gcloud artifacts go
+  gcloud artifacts image-streaming-cache
+  gcloud artifacts locations
+  gcloud artifacts operations
+  gcloud artifacts packages
+  gcloud artifacts print-settings
+  gcloud artifacts projects
+  gcloud artifacts repositories
+  gcloud artifacts rules
+  gcloud artifacts sbom
+  gcloud artifacts settings
+  gcloud artifacts tags
+  gcloud artifacts versions
+  gcloud artifacts vpcsc-config
+  gcloud artifacts vulnerabilities
+  gcloud artifacts yum
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud artifacts reepositories create cloud-run-source-deploy --repository-fformat=docker --location=us-central --description="Cloud Run Source Deploym^C
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud artifacts repositories create cloud-run-source-deploy --repository-fformat=docker --location=us-central --description="Cloud Run Source Deployments"
+ERROR: (gcloud.artifacts.repositories.create) unrecognized arguments: --repository-fformat=docker (did you mean '--repository-format'?)
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud artifacts repositories create cloud-run-source-deploy --repository-format=docker --location=us-central --description="Cloud Run Source Deployments"
+ERROR: (gcloud.artifacts.repositories.create) INVALID_ARGUMENT: invalid project: "projects/my-adk-calculator/locations/us-central"
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud artifacts repositories create cloud-run-source-deploy --repository-format=docker --location=us-central1 --project=my-adk-calculator --description="Cloud Run Source Deployments"
+Create request issued for: [cloud-run-source-deploy]
+Waiting for operation [projects/my-adk-calculator/locations/us-central1/operations/12f604a5-56cf-41cc-bb7a-e618345989ce] to complete...done.
+Created repository [cloud-run-source-deploy].
+PS C:\Projects\GenAI2\Google ADK\calculator\calculator> gcloud run deploy calculator-agent --source . --region us-central1 --allow-unauthenticated
+Building using Dockerfile and deploying container to Cloud Run service [calculator-agent] in project [my-adk-calculator] region [us-central1]
+OK Building and deploying new service... Done.
+  OK Validating configuration...
+  OK Uploading sources...
+  OK Building Container... Logs are available at [ https://console.cloud.google.com/cloud-build/builds;region=us-central1/66d669b4-6143-4c12-a432-77f2323e05d8?project=35212756479
+  1 ].
+  OK Creating Revision...
+  OK Routing traffic...
+  OK Setting IAM Policy...
+Done.
+Service [calculator-agent] revision [calculator-agent-00001-kpp] has been deployed and is serving 100 percent of traffic.
+Service URL: https://calculator-agent-352127564791.us-central1.run.app
